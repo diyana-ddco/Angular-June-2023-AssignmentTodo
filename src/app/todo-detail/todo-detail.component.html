@@ -1,0 +1,16 @@
+
+<div *ngIf="mode === DetailMode.CREATE">
+    <input type="text" [(ngModel)]="textValue" class="todo-input" placeholder="Write your todo list here...">
+    <button class="btn-add" (click)="onCreate()">Add</button>
+    <p class="error-info" *ngIf="errorInfo">{{ errorInfo }}</p>
+</div>
+
+<div *ngIf="mode === DetailMode.UPDATE && todo" class="popup">
+    <h3>Edit your todo:</h3>
+    <div class="popup-body">
+        <p class="popup-info"></p>
+        <input type="text" [(ngModel)]="textValue" class="popup-input" placeholder="Enter new task content...">
+        <button class="popup-btn accept" (click)="onUpdate()">Update</button>
+        <button class="popup-btn cancel" (click)="onCancel()">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+
+.todolist {
+    padding: 20px 0;
+}
+
+.todolist h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.todolist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-left: 20px;
+    text-align: left;
+    list-style: none;
+    background-color: var(--light);
+}

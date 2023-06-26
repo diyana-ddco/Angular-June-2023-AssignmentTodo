@@ -1,0 +1,15 @@
+
+<div class="todo">
+    <div class="header">
+        <h1>ToDo List</h1>
+        <app-todo-detail [mode]="DetailMode.CREATE" (createTodoEvent)="createTodo($event)" />
+    </div>
+    <app-todo-list [todos]="todos" 
+        (selectTodoEvent)="selectTodo($event)" 
+        (updateTodoEvent)="updateTodo($event)"
+        (deleteTodoEvent)="deleteTodo($event)" />
+</div>
+
+<app-todo-detail [mode]="DetailMode.UPDATE" [todo]="selectedTodo" 
+    (updateTodoEvent)="updateTodo($event)"
+    (closeDetailEvent)="selectTodo(undefined)" />
